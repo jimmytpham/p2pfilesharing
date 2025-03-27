@@ -1,0 +1,13 @@
+module FileSharing {
+    typedef sequence<string> StringList;
+
+    interface FileSharingService {
+        void registerFile(in string fileName, in long userId);
+        void removeFile(in string fileName, in long userId);
+        StringList searchFile(in string fileName);
+        string getFileOwner(in string fileName);
+        string getFileInfo(in long fileId);
+        string downloadFile(in string fileName);
+    };
+};
+
